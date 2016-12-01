@@ -1,0 +1,18 @@
+1.线程(Thread)
+  [1]开线程的两种方式
+     继承Thread类
+     实现Runnable接口  优点：利于类的扩展
+  [2]线程的状态图
+  [3]线程的六种状态
+     创建：new
+     准备：runnable
+     运行：running
+     等待：time_waiting/waiting
+     阻塞：block
+     结束：terminated
+  [4]start()
+     run()
+     sleep()
+     wait()
+     notify()/notifyAll()
+

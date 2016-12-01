@@ -1,0 +1,43 @@
+package com;
+
+public class Cat {
+	private String name;
+	private String color;
+	private int age;
+	
+	public Cat(String name, String color, int age) {
+		super();
+		this.name = name;
+		this.color = color;
+		this.age = age;
+	}
+
+	public Cat(String name) {
+		super();
+		this.name = name;
+		color = "»ÆÉ«";
+		age = 5;
+	}
+	
+	private Cat(){
+		name = "²¨Ë¹Ã¨";
+		color = "°×É«";
+		age = 1;
+	}
+	
+	public void display(){
+		System.out.println(name + color + age);
+	}
+	
+	public void eat(int count){
+		System.out.println(this.name + "³ÔÁË" + count + "ÌõÓã");
+		
+	}
+	
+	private void sleep(){
+		System.out.println(this.name + "Ë¯Îç¾õ");
+	}
+
+	
+	
+}

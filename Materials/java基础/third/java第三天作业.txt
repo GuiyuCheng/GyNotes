@@ -1,0 +1,25 @@
+1.什么是多态？使用多态的好处？
+
+
+2.代码举例instanceof关键字的用法。
+
+
+3.什么是异常？简述异常的分类。例举出常见的异常。
+
+
+4.叙述try,catch,finally,throw,throws关键字含义。
+
+
+5.什么是单例模式，写出单例模式代码。
+
+
+6.简述final，finally，finalize关键字含义。
+
+
+7.查阅Java API，新建一个方法，将字符串 String s = "abccabca"中的字符'a'替换成'y'
+  函数声明：String myReplace(String s, char source, char target) //将串s中的字符source替换为字符target
+
+
+8.定义一个学生类。创建出五个学生对象。用Scanner录入学生信息。将学生的分数进行排序，按分数高低依次输出学生信息。
+  //Arrays.sort(), 匿名内部类。
+  注意用面向对象的思想来处理该问题。

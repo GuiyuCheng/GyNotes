@@ -1,0 +1,128 @@
+1.配置java环境变量
+  [1]在windows下安装jdk文件，路径默认
+  [2]我的电脑-->属性-->高级-->环境变量-
+     Path：“;C:\ProgramFiles\Java\jdk1.7.0\bin”
+     CLASSPATH：“;C:\ProgramFiles\Java\jdk1.7.0\lib”
+
+2.编译执行java程序
+  javac TestJava.java
+  生成TestJava.class字节码文件
+  java TestJava
+  注意：执行java程序时，不需要文件类型。
+        同时编译多个.java文件，但是只能执行其中的一个.class文件
+
+3.关于HelloWorld程序的解释
+  //包名，指定当前类文件在com包下
+  package com;
+  //类名 HelloWorld，第一个字母大写的，每个单词的首字母也是大写，类名和.java文件名一致
+  class HelloWorld{
+ 	//入口方法，不能修改
+	public static void main(String args[]){
+  		System.out.println("HelloWorld");
+  	}
+
+  }
+
+4.类和对象(class and object)
+  [1]类的概念：类是对某一类事物的描述，是抽象的，概念意义上的。
+  [2]类的格式
+     public class 类名{
+     	//属性(成员变量)(全局变量)
+        //方法(成员方法)(行为)
+        //构造方法(构造方法缺省返回值，构造方法名和类名一致)
+                 (构造方法用来初始化属性，构造方法在创建对象的时候调用)
+
+     }
+  [3]对象的概念：对象是实际存在的该类事物的每一个个体，也称实例（instance）
+     类名 对象名 = new 类名()
+     通过对象名访问对象中的属性和方法
+     对象名.属性
+     对象名.方法
+  [4]创建对象时，系统给属性赋默认值
+     byte short int long 0
+     float double        0.0
+     char                \u0000
+     boolean             false
+     引用数据类型         null
+
+5.Eclipse下创建java工程
+  [1]new java project
+  [2]new package
+  [3]new class
+
+6.向Eclipse导入java工程
+  [1]import
+  [2]General --> Existing Projects into WorkSpace
+
+7.创建一个手机类。属性：手机品牌，手机型号，手机价格，手机的尺寸
+                 方法：发短信，打电话，上网
+  创建一个测试类。入口方法。创建出三个手机对象，分别是三星Note3，iphone 6，Htc one。
+                          phone_02.call()控制台打印输出“iphone 6 正在拨号”
+
+8.方法
+  [1]构造方法
+     [1]格式
+        public 类名(){}
+     [2]功能
+        初始化属性
+     [3]创建对象的时候调用构造方法 
+     [4]如果类里面没有定义构造方法，那么系统自动添加一个不但参数且方法体为空的构造方法。    
+
+  [2]普通方法（行为） ---相当于----c里面的函数---
+     [1]格式
+        public 返回值 方法名(){}
+
+  [3]方法的重载
+     [1]方法名一样，形参列表不一致
+     [2]发生在同一个类中
+
+9.访问控制修饰符
+  public 修饰的属性和方法，所有类可见
+  private 修饰的属性和方法，只被当前类可见
+  缺省的   。。。。。。。   同包可见
+
+10.package和import
+   [1]在类外书写
+   [2]package表示当前类所在的包
+   [3]import导入其它包中的类
+      每个类系统默认导入java.lang包下的所有类
+      java.lang包下常用类(System, String, Math, Integer, Thread....)
+
+11.标示符命名规则
+   [1]标示符是类，变量，方法的命名
+   [2]标示符由字母，数字，下划线"_"美元符号"$"组成，不能以数字开头。 
+      不能和系统关键字重名。大小写敏感。
+      类名第一个字母大写。变量名和方法名第一个字母小写。
+      不能和类重名
+
+12.java数据类型
+   [1]简单数据类型：byte short int long
+                   float double
+                   char 两个字节 Unicode编码，可以识别中文
+                   boolean 1bit false true
+   [2]引用数据类型：class interface 数组
+
+13.java垃圾回收机制(GC--Garbage collection)
+   java程序在运行时，开启了两个线程，一个线程是main线程，一个后台GC线程。
+   如果JVM检测到系统内存不够，回收没有引用（句柄，对象名）的对象。
+
+14.局部变量
+   [1]定义在方法体内或者代码块内
+   [2]作用域在方法体内和代码块内
+   [3]使用之前需要初始化
+
+15.成员变量
+   [1]定义在方法体或者代码块外面，类里面
+   [2]作用域在整个类中，可以被类中的所有方法和代码块访问
+   [3]系统给成员变量赋默认值
+
+16.数组
+   [1]数据初始化
+      动态初始化: int arr_01[] = new int[10];  //在堆上分配内存
+      静态初始化：int arr_02[] = {1, 2, 3};    //在常量区开辟内存
+   [2]得到数组的长度 arr_01.length;
+
+17.利用javadoc.exe生成文档
+   使用shift+Alt+j进行文档注释 （类，属性，方法）
+   选中工程 --> export --> java/Javadoc --> 选中jdk/bin/javadoc.exe --> finish导出文档
+
